@@ -1,5 +1,5 @@
 // EDIT THIS: set the target birthday date/time
-const TARGET_DATE = new Date('2026-12-25T00:00:00');
+const TARGET_DATE = new Date('2026-10-07T00:00:00');
 
 function goTo(id){
   document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));
