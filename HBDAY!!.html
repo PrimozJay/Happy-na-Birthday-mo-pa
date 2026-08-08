@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Love</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fireflies" id="fireflies"></div>
+
+<!-- SCENE 0 : CANDLE COUNTDOWN -->
+<section class="scene active" id="scene0">
+  <p class="count-title" id="count-title-text">Happy na, Birthday mo pa</p>
+
+  <div class="candle-wrap">
+    <svg width="160" height="150" viewBox="0 0 160 150" fill="none">
+      <ellipse cx="80" cy="138" rx="64" ry="8" fill="#3a2b17" opacity="0.3"/>
+
+      <rect x="24" y="86" width="112" height="46" rx="6" fill="#8f5225"/>
+      <rect x="24" y="86" width="112" height="14" fill="#a68a52" opacity="0.5"/>
+
+      <rect x="30" y="56" width="100" height="38" rx="8" fill="#c97a3d"/>
+      <path d="M30 60 q8 -10 16 0 q8 -10 16 0 q8 -10 16 0 q8 -10 16 0 q8 -10 16 0 q8 -10 16 0 v10 h-96 z" fill="#f1e6ce"/>
+
+      <rect x="38" y="30" width="4" height="24" fill="#e6d6ae"/>
+      <path d="M40 8c6 8 8 14 4 20-2 3-6 3-8 0-4-6-2-12 4-20z" fill="#c97a3d"/>
+      <path d="M40 14c3 5 4 8 2 11-1 1.5-3 1.5-4 0-2-3-1-6 2-11z" fill="#f1e6ce"/>
+
+      <rect x="98" y="34" width="4" height="20" fill="#e6d6ae"/>
+      <path d="M100 14c5 7 7 12 3.5 17-1.7 2.5-5.3 2.5-7 0-3.5-5-1.5-10 3.5-17z" fill="#8a5570"/>
+      <path d="M100 19c2.5 4 3.5 6.5 1.5 9-0.9 1.2-2.6 1.2-3.5 0-1.7-2.5-0.8-5 2-9z" fill="#f1e6ce"/>
+
+      <circle cx="60" cy="72" r="4" fill="#8a5570"/>
+      <circle cx="80" cy="76" r="4" fill="#4f6b4a"/>
+      <circle cx="100" cy="70" r="4" fill="#8a5570"/>
+      <circle cx="70" cy="112" r="3" fill="#f1e6ce" opacity="0.6"/>
+      <circle cx="92" cy="116" r="3" fill="#f1e6ce" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <div class="count-grid">
+    <div class="count-unit"><span class="count-num" id="cd-days">00</span><span class="count-label">days</span></div>
+    <div class="count-unit"><span class="count-num" id="cd-hours">00</span><span class="count-label">hrs</span></div>
+    <div class="count-unit"><span class="count-num" id="cd-min">00</span><span class="count-label">min</span></div>
+    <div class="count-unit"><span class="count-num" id="cd-sec">00</span><span class="count-label">sec</span></div>
+  </div>
+
+  <button class="skip-btn" onclick="goTo('scene1')">click me</button>
+  <button class="reveal-btn" id="reveal-btn" onclick="goTo('scene1')">open your gift</button>
+</section>
+
+<!-- SCENE 1 : WILDFLOWERS + TAG -->
+<section class="scene" id="scene1">
+  <p class="headline">Hi J, I made you something for your birthday!</p>
+
+  <div class="bouquet-wrap">
+    <svg width="220" height="220" viewBox="0 0 220 220" fill="none">
+      <path d="M110 130 L110 210" stroke="#4f6b4a" stroke-width="4"/>
+      <path d="M110 160 Q90 170 80 190" stroke="#4f6b4a" stroke-width="3" fill="none"/>
+      <path d="M110 150 Q130 158 140 178" stroke="#4f6b4a" stroke-width="3" fill="none"/>
+      <ellipse cx="78" cy="188" rx="14" ry="7" fill="#4f6b4a" transform="rotate(-30 78 188)"/>
+      <ellipse cx="142" cy="176" rx="14" ry="7" fill="#4f6b4a" transform="rotate(25 142 176)"/>
+
+      <g transform="translate(70,112)">
+        <circle cx="-14" cy="0" r="10" fill="#c97a3d"/>
+        <circle cx="14" cy="0" r="10" fill="#c97a3d"/>
+        <circle cx="0" cy="-14" r="10" fill="#c97a3d"/>
+        <circle cx="0" cy="14" r="10" fill="#c97a3d"/>
+        <circle r="7" fill="#8f5225"/>
+      </g>
+      <g transform="translate(122,96) scale(0.85)">
+        <circle cx="-14" cy="0" r="10" fill="#8a5570"/>
+        <circle cx="14" cy="0" r="10" fill="#8a5570"/>
+        <circle cx="0" cy="-14" r="10" fill="#8a5570"/>
+        <circle cx="0" cy="14" r="10" fill="#8a5570"/>
+        <circle r="7" fill="#5c3549"/>
+      </g>
+      <g transform="translate(96,74) scale(1)">
+        <circle cx="-14" cy="0" r="10" fill="#f1e6ce"/>
+        <circle cx="14" cy="0" r="10" fill="#f1e6ce"/>
+        <circle cx="0" cy="-14" r="10" fill="#f1e6ce"/>
+        <circle cx="0" cy="14" r="10" fill="#f1e6ce"/>
+        <circle r="7" fill="#a68a52"/>
+      </g>
+    </svg>
+  </div>
+
+  <button class="tag-area" onclick="goTo('scene2')" aria-label="Open the letter">
+    <div class="gift-tag">
+      <div class="tag-hole"></div>
+      <div class="tag-mark">open me</div>
+    </div>
+    <div class="tag-twine"></div>
+    <p class="prompt-text">pull the tag to read my letter</p>
+  </button>
+</section>
+
+<!-- SCENE 2 : LETTER -->
+<section class="scene" id="scene2">
+  <div class="letter-card">
+    <p class="letter-ribbon">Happy birthday, j!!</p>
+    <p class="letter-title">para to sainyo</p>
+    <p class="letter-body">
+      Lakas amats
+    </p>
+    <p class="letter-sign">-pilyo</p>
+  </div>
+  <button class="continue-btn" onclick="goTo('scene3')">keep scrolling</button>
+</section>
+
+<!-- SCENE 3 : CORKBOARD -->
+<section class="scene" id="scene3">
+  <button class="back-btn" onclick="goTo('scene2')">&larr; back</button>
+  <p class="scrap-title">Kunan Mong Pic</p>
+
+  <div class="scrapboard">
+    <div class="photo-pin" style="top:24px;left:6%;transform:rotate(-6deg);">
+      <span class="pin-dot"></span>
+      <div class="photo-slot"><img src="photo1.jpg" alt=""></div>
+      <figcaption>J</figcaption>
+    </div>
+
+    <div class="photo-pin" style="top:70px;left:38%;transform:rotate(4deg);z-index:2;">
+      <span class="pin-dot"></span>
+      <div class="photo-slot"><img src="photo2.jpg" alt=""></div>
+      <figcaption>J</figcaption>
+    </div>
+
+    <div class="photo-pin" style="top:30px;right:4%;transform:rotate(7deg);">
+      <span class="pin-dot"></span>
+      <div class="photo-slot"><img src="photo3.jpg" alt=""></div>
+      <figcaption>J</figcaption>
+    </div>
+
+    <div class="photo-pin" style="top:320px;left:14%;transform:rotate(-4deg);width:120px;">
+      <span class="pin-dot"></span>
+      <div class="photo-slot"><img src="photo4.jpg" alt=""></div>
+      <figcaption>J</figcaption>
+    </div>
+
+    <div class="photo-pin" style="top:340px;right:12%;transform:rotate(6deg);width:120px;">
+      <span class="pin-dot"></span>
+      <div class="photo-slot"><img src="photo5.jpg" alt=""></div>
+      <figcaption>J</figcaption>
+    </div>
+
+    <span class="leaf-sticker" style="top:200px;left:22%;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c6 4 8 10 6 16-4 2-10 0-12-6C4 8 6 4 12 2z"/></svg>
+    </span>
+    <span class="leaf-sticker" style="top:420px;left:34%;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c6 4 8 10 6 16-4 2-10 0-12-6C4 8 6 4 12 2z"/></svg>
+    </span>
+    <span class="leaf-sticker" style="top:80px;left:62%;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c6 4 8 10 6 16-4 2-10 0-12-6C4 8 6 4 12 2z"/></svg>
+    </span>
+    <span class="leaf-sticker" style="top:450px;right:6%;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c6 4 8 10 6 16-4 2-10 0-12-6C4 8 6 4 12 2z"/></svg>
+    </span>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
